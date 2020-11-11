@@ -7,7 +7,7 @@ class Character
 {
 
 public:
-	 Character(SDL_Setup* passed_SDL_Setup, int* CameraX, int* CameraY);
+	 Character(SDL_Setup* passed_SDL_Setup, float* CameraX, float* CameraY);
 	 ~Character(void);
 
 	 void Update();
@@ -21,7 +21,7 @@ private:
 	int SpriteRow;
 	SDL_Setup* sdl_setup;
 
-	int *CameraX, *CameraY;
+	float *CameraX, *CameraY;
 
 };
 

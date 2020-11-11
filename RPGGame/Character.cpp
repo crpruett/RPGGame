@@ -2,13 +2,14 @@
 #include "stdafx.h"
 
 
-Character::Character(SDL_Setup* passed_SDL_Setup, int *passed_CameraX, int *passed_CameraY) {
+Character::Character(SDL_Setup* passed_SDL_Setup, float *passed_CameraX, float *passed_CameraY) {
+	CameraX = passed_CameraX;
+	CameraY = passed_CameraY;
+	
 	sdl_setup = passed_SDL_Setup;
 	tickCheck = SDL_GetTicks();
 	cecil = new Sprite(sdl_setup->GetRenderer(), "C:\\Users\\Ginrai\\Desktop\\Game Programming\\Programming Files\\Game Assets\\ff42.png", 0, 0, 40, 60, CameraX, CameraY);
 
-	CameraX = passed_CameraX;
-	CameraY = passed_CameraY;
 }
 
 Character::~Character(void) {

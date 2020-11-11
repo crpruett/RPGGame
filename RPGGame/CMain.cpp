@@ -27,6 +27,8 @@ void CMain::GameLoop(void) { //void isn't necessary but good practice
 		sdl_setup->Begin();
 		grass->Draw();
 		cecil->Draw();
+
+		CameraX += 0.05f;
 		//cecil->PlayerAnimation(0, 2, 1, 200); //rows count from 0
 		cecil->Update();
 		sdl_setup->End(); //Updating the screen

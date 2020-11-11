@@ -2,7 +2,7 @@
 #include "stdafx.h"
 using namespace std;
 
-Sprite::Sprite(SDL_Renderer* passed_renderer, string FilePath, int x, int y, int w, int h, int *passed_CameraX, int *passed_CameraY) {
+Sprite::Sprite(SDL_Renderer* passed_renderer, string FilePath, int x, int y, int w, int h, float *passed_CameraX, float *passed_CameraY) {
 	renderer = passed_renderer;
 	image = NULL;
 	image = IMG_LoadTexture(renderer, FilePath.c_str());

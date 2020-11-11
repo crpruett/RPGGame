@@ -4,7 +4,7 @@
 class Sprite
 {
 public:
-	Sprite(SDL_Renderer* passed_renderer, std::string FilePath, int x, int y, int w, int h, int *CameraX, int *CameraY);
+	Sprite(SDL_Renderer* passed_renderer, std::string FilePath, int x, int y, int w, int h, float *CameraX, float *CameraY);
 	~Sprite(void);
 	void SetX(int X);
 	void SetY(int Y);
@@ -27,8 +27,9 @@ private:
 	int currentFrame;
 	int animationDelay;
 
-	int* CameraX;
-	int *CameraY;
+	float* CameraX;
+	float *CameraY;
 	SDL_Rect Camera;
+	//dd
 };
 

@@ -19,6 +19,6 @@ private:
 	Character* cecil;
 	SDL_Setup* sdl_setup;
 
-	int CameraX, CameraY;
+	float CameraX, CameraY;
 };
 
