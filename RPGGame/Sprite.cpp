@@ -30,8 +30,8 @@ Sprite::Sprite(SDL_Renderer* passed_renderer, string FilePath, int x, int y, int
 	CameraX = passed_CameraX;
 	CameraY = passed_CameraY;
 
-	Camera.x = rect.x + *CameraX;
-	Camera.y = rect.y + *CameraY;
+	//Camera.x = rect.x + *CameraX; ???
+	//Camera.y = rect.y + *CameraY; ???
 	Camera.w = rect.w;
 	Camera.h = rect.h;
 }
