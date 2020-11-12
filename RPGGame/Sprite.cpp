@@ -40,13 +40,16 @@ Sprite::~Sprite(void) {
 	SDL_DestroyTexture(image);
 }
 
-void Sprite::Draw() {
+void Sprite::Draw() { //Used with drawing with camera settings.
 	Camera.x = rect.x + *CameraX;
 	Camera.y = rect.y + *CameraY;
 	
 	SDL_RenderCopy(renderer, image, &crop, &Camera); //Copies image/texture to renderer for the RenderPresent
 } //Replaced the third parameter (NULL) which is used for cropping images.
 
+void Sprite::DrawSteady() { //Used with drawing without camera
+	SDL_RenderCopy(renderer, image, &crop, &rect);
+}
 void Sprite::SetX(int X) {
 	rect.x = X;
 }

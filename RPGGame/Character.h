@@ -14,6 +14,9 @@ public:
 	 void Draw();
 
 private:
+	void UpdateAnimation();
+	void UpdateControls();
+
 	Sprite* cecil;
 	int timeCheck;
 	bool MovingUp, MovingDown, MovingLeft, MovingRight;//Used for more fluid character movement

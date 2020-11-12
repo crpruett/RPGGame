@@ -15,7 +15,7 @@ private:
 	int ScreenWidth;
 	int ScreenHeight;
 	bool quit;
-	Sprite* grass;
+	Sprite* grass[4][7];
 	Character* cecil;
 	SDL_Setup* sdl_setup;
 

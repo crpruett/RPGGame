@@ -14,7 +14,7 @@ public:
 	int GetY();
 
 	void Draw();
-
+	void DrawSteady();
 	void PlayerAnimation(int FirstFrame, int LastFrame, int Row, float Speed);
 private:
 	SDL_Texture* image;
