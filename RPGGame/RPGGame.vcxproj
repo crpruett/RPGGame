@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Character.h" />
     <ClInclude Include="CMain.h" />
+    <ClInclude Include="Environment.h" />
     <ClInclude Include="SDL_Setup.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="stdafx.h" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="CMain.cpp" />
+    <ClCompile Include="Environment.cpp" />
     <ClCompile Include="RPGGame.cpp" />
     <ClCompile Include="SDL_Setup.cpp" />
     <ClCompile Include="Sprite.cpp" />

@@ -30,6 +30,9 @@
     <ClInclude Include="Character.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Environment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPGGame.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Character.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

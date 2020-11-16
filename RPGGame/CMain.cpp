@@ -1,6 +1,7 @@
 #include "CMain.h"
 #include "stdafx.h"
 #include "Sprite.h"
+#include "Environment.h"
 
 using namespace std;
 CMain::CMain(int pScreenWidth, int pScreenHeight) {
@@ -9,25 +10,19 @@ CMain::CMain(int pScreenWidth, int pScreenHeight) {
 	ScreenHeight = pScreenHeight;
 	quit = false;
 	sdl_setup = new SDL_Setup(&quit, ScreenWidth, ScreenHeight);
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 7; j++) {
-			grass[i][j] = new Sprite(sdl_setup->GetRenderer(), "C:\\Users\\Ginrai\\Desktop\\Game Programming\\Programming Files\\Game Assets\\grass.bmp", ScreenWidth * i, ScreenHeight * j, ScreenWidth, ScreenHeight, &CameraX, &CameraY);
-		}
-	}
+	
 
 	cecil = new Character(sdl_setup, &CameraX, &CameraY);
 
 	CameraX = 0;
 	CameraY = 0;
+
+	StageArea = new Environment(sdl_setup, ScreenWidth, ScreenHeight, &CameraX, &CameraY);
 }
 
 CMain::~CMain(void) {
 	delete sdl_setup;
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 7; j++) {
-			delete grass[i][j];
-		}
-	}
+	
 	delete cecil;
 }
 
@@ -36,13 +31,11 @@ void CMain::GameLoop(void) { //void isn't necessary but good practice
 	while (!quit && sdl_setup->GetEvents()->type != SDL_QUIT) { //use arrows for pointers and dots for non-pointers
 		sdl_setup->Begin();
 		//grass->Draw();
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 7; j++) {
-				grass[i][j]->Draw();
-			}
-		}
+		StageArea->DrawBack();
 		cecil->Draw();
 		cecil->Update();
+
+		StageArea->DrawFront(); //Front area drawn after everything else 
 		sdl_setup->End(); //Updating the screen
 	}
 }

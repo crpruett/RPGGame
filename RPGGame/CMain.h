@@ -3,6 +3,7 @@
 #include "SDL_Setup.h"
 #include "Sprite.h"
 #include "Character.h"
+#include "Environment.h"
 
 class CMain {
 public:
@@ -12,6 +13,8 @@ public:
 	void GameLoop();
 
 private:
+	Environment* StageArea;
+
 	int ScreenWidth;
 	int ScreenHeight;
 	bool quit;
