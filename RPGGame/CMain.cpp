@@ -34,7 +34,7 @@ void CMain::GameLoop(void) { //void isn't necessary but good practice
 		StageArea->DrawBack();
 		cecil->Draw();
 		cecil->Update();
-
+		StageArea->Update();
 		StageArea->DrawFront(); //Front area drawn after everything else 
 		sdl_setup->End(); //Updating the screen
 	}
